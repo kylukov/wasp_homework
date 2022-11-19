@@ -101,5 +101,18 @@ public class Truck : Car
         return $"{base.ToString()}\n >current: {_current_weight}\n >max: {_maximum_trucking}\n >FIO: {_driver_Fio}";
     }
 }
+
+public class Autopark
+{
+    private string _name;
+    private List<Car> _AllCars = new List<Car>();
+
+    public void Autpark(string name, List<Car> all)
+    {
+        _name = name;
+        _AllCars = all;
+    }
+    
+}
     
     
