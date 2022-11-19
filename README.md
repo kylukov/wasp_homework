@@ -7,7 +7,7 @@
 
 Название          | Статус | Ссылка
 ------------------|--------|--------
-Автопарк          | 🔴    | <a href="https://github.com/vdetstvepil/wasp-homework/tree/master/Autopark">Перейти</a>
+1 ДЗ              | 🟢    | <a href="https://github.com/kylukov/wasp_homework/tree/main/1%20homework">Перейти</a>
 
 **Статусы выполнения:** <br>
 🔴 Не готово <br>
