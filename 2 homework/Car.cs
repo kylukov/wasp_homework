@@ -1,29 +1,29 @@
 ﻿namespace MyApp;
 
-    public class Car
+public class Car
+{
+    private string _name;
+    private int _hp_power;
+    private int _year;
+
+
+    public string Name { get => _name; set => _name = value; }
+
+    public int Horse_Power { get => _hp_power; set => _hp_power = value; }
+
+    public int Year { get => _year; set => _year = value; }
+
+
+
+
+    public Car(string name, int hp_power, int year) { _name = name; _hp_power = hp_power; _year = year; }
+
+    public override string ToString()
     {
-        private string _name;
-        private int _hp_power;
-        private int _year;
-
-
-        public string Name { get => _name; set => _name = value; }
-
-        public int Horse_Power { get => _hp_power; set => _hp_power = value; }
-
-        public int Year { get => _year; set => _year = value; }
-
-
-
-
-        public Car(string name, int hp_power, int year) { _name = name; _hp_power = hp_power; _year = year; }
-
-         public override string ToString()
-        {
-            return $"object: {_name} {_hp_power} {_year}";
-        }
-
+        return $"object: {_name} {_hp_power} {_year}";
     }
+
+}
 
 public class PassengerCar : Car
 {
@@ -66,7 +66,8 @@ public class Truck : Car
     private string _driver_Fio;
     private int _current_weight;
     private Dictionary<string, int> _weight_card = new Dictionary<string, int>();
-    public Truck(string name, int hp_power, int year, int trucking, string FIO, int weight) : base(name, hp_power, year)
+    public Truck(string name, int hp_power, int year, int trucking, string FIO,
+        int weight) : base(name, hp_power, year)
     {
         _maximum_trucking = trucking;
         _driver_Fio = FIO;
@@ -107,12 +108,21 @@ public class Autopark
     private string _name;
     private List<Car> _AllCars = new List<Car>();
 
-    public void Autpark(string name, List<Car> all)
+    public Autopark(string name, List<Car> all)
     {
         _name = name;
         _AllCars = all;
     }
-    
+
+    public override string ToString()
+    {
+        string res = "";
+        foreach(Car car in _AllCars)
+        {
+            res += " > " + car.ToString() + "\n";
+        }
+        return $"{_name}\n{res}";
+    }
+
 }
-    
-    
+
